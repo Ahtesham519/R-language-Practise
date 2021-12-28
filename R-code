@@ -1,0 +1,92 @@
+penguins %>% 
+  select(-species)
+
+penguins %>% 
+  rename(island_new=island)
+  rename(island_new=island)
+  rename(island_new=island)
+  rename(island_new=island)
+  
+rename_with(penguins,tolower)
+
+clean_names(penguins)
+
+
+penguins %>% 
+  arrange(bill_length_mm)
+
+penguins2 <- penguins %>% 
+  arrange(-bill_length_mm)
+
+  view(penguins2)
+  
+  penguins %>% 
+    group_by(island) %>% 
+    drop_na() %>% 
+    summarize(mean_bill_length_mm = mean(bill_length_mm))
+  
+head(penguins)
+  
+  penguins %>% 
+    group_by(island) %>% 
+    drop_na() %>% 
+    summarise(max_bill_length_mm = max(bill_length_mm))
+  
+  
+  penguins %>% 
+    group_by(species, island) %>% 
+    drop_na() %>% 
+    summarise(max_bl = max(bill_length_mm), mean_bl = mean(bill_length_mm))
+  
+  
+  
+  
+  penguins %>% 
+    filter(species == "Adelie") %>% 
+    drop_na()
+  
+  
+  
+  
+  
+  
+  
+  
+  id<- c(1:10)
+  name <-c("John Mendes" , "Rob Stewart" , "Rachel Abrahamson", "Christy Hickman ", " Johson Harper", 
+           "Candace Miller" , " Carlason Landy" ,"Pansy Jordan" , "Darius Berry" , "Claudia Gracia")
+  job_title <- c("Professional" , "Programmer", "Management" , "Clerical" , "Developer" , "Programmer", "Management"
+    "Clerical" , "Developer ", "Programmer" )
+  employee <- data.frame(id,namejob_title)
+  
+  id <- c(1:10)
+  
+  name <- c("John Mendes", "Rob Stewart", "Rachel Abrahamson", "Christy Hickman", "Johnson Harper", "Candace Miller", "Carlson Landy", "Pansy Jordan", "Darius Berry", "Claudia Garcia")
+  
+  job_title <- c("Professional", "Programmer", "Management", "Clerical", "Developer", "Programmer", "Management", "Clerical", "Developer", "Programmer")
+  
+  employee <- data.frame(id, first_name,last_name, job_title)
+  
+  unite(employee,'name',first_name,last_name, sep= ' ')
+  
+   separate(employee,name,into = c('first name', 'last_name') , sep = ( ' '))
+  
+  
+  
+  
+  
+  view(penguins)
+  
+  penguins %>% 
+    mutate(body_mass_kg = body_mass_g/1000, flipper_length_m = flipper_length_mm/1000) %>% 
+    drop_na()
+  
+  
+  
+  
+  install.packages('Tmisc')
+  library(Tmisc)
+  data(quartet)
+  view(quartet)
+  
+  
